@@ -3,6 +3,8 @@ const router = express.Router();
 const {registerUser, authUser} = require('../controllers/userController');
 
 router.post('/register', registerUser);
-router.post('/login', authUser);   
- 
+router.get('/login', (req, res) => {
+  res.send('✅ Login route is reachable');
+});
+
 module.exports = router;
