@@ -22,6 +22,11 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: 'Server error' });
 });
 
+app.get('/', (req, res) => {
+  res.send('Task Manager API is running 🚀');
+});
+
+
 // Start the server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
